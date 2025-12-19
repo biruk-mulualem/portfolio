@@ -14,7 +14,7 @@ interface Work {
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterLink],
+  imports: [CommonModule, FormsModule],
   templateUrl: './landing-page.html',
   styleUrls: ['./landing-page.css'],
 })
