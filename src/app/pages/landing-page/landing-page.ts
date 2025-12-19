@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, HostListener } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from "@angular/router";
 
 interface Work {
   image: string;
@@ -13,7 +14,7 @@ interface Work {
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterLink],
   templateUrl: './landing-page.html',
   styleUrls: ['./landing-page.css'],
 })
