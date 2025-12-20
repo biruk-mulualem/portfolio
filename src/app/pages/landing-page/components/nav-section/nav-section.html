@@ -1,0 +1,86 @@
+<!-- Page Navbar -->
+<nav class="custom-navbar">
+  <div class="container">
+    <a class="logo" href="#">Biruks</a>
+
+    <ul class="nav" [class.show]="isNavOpen">
+      <li class="item">
+        <a
+          class="link"
+          href="#home"
+          (click)="scrollTo($event, 'home')"
+          [class.active]="activeSection === 'home'"
+        >
+          Home
+        </a>
+      </li>
+
+      <li class="item">
+        <a
+          class="link"
+          href="#about"
+          (click)="scrollTo($event, 'about')"
+          [class.active]="activeSection === 'about'"
+        >
+          About
+        </a>
+      </li>
+
+      <li class="item">
+        <a
+          class="link"
+          href="#projects"
+          (click)="scrollTo($event, 'projects')"
+          [class.active]="activeSection === 'projects'"
+        >
+          projects
+        </a>
+      </li>
+
+      <li class="item">
+        <a
+          class="link"
+          href="#testmonial"
+          (click)="scrollTo($event, 'testmonial')"
+          [class.active]="activeSection === 'testmonial'"
+        >
+          Testmonial
+        </a>
+      </li>
+
+      <li class="item">
+        <a
+          class="link"
+          href="#blog"
+          (click)="scrollTo($event, 'blog')"
+          [class.active]="activeSection === 'blog'"
+        >
+          Blog
+        </a>
+      </li>
+
+      <li class="item">
+        <a
+          class="link"
+          href="#contact"
+          (click)="scrollTo($event, 'contact')"
+          [class.active]="activeSection === 'contact'"
+        >
+          Contact
+        </a>
+      </li>
+    </ul>
+
+    <a
+      href="javascript:void(0)"
+      id="nav-toggle"
+      class="hamburger hamburger--elastic"
+      [class.is-active]="isNavOpen"
+      (click)="toggleNav()"
+    >
+      <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+      </div>
+    </a>
+  </div>
+</nav>
