@@ -36,8 +36,8 @@ export class ProjectsSection implements AfterViewInit {
       stack: ['Angular', 'HTML', 'CSS', 'JavaScript', 'Responsive Design'],
       image: 'assets/imgs/spotlight-academy.jpg',
       liveDemo: 'https://example.com', // optional
-      github: 'https://github.com/yourusername/spotlight-academy', // optional
-      video: 'https://youtu.be/example', // optional
+      github: 'https://github.com/biruk-mulualem/spotlight.git', // optional
+      video: 'https://youtu.be/MqVoTfX7tw8', // optional
       showFullDescription: false,
     },
     {
@@ -47,8 +47,8 @@ export class ProjectsSection implements AfterViewInit {
       stack: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Game Logic'],
       image: 'assets/imgs/fidel-game.jpg',
       liveDemo: 'https://example.com', // optional
-      github: 'https://github.com/yourusername/fidel-game', // optional
-      video: 'https://youtu.be/example', // optional
+      github: 'https://github.com/biruk-mulualem/fidel-game.git', // optional
+      video: 'https://youtu.be/I3YgKO6cr5c', // optional
       showFullDescription: false,
     },
 
@@ -58,8 +58,8 @@ export class ProjectsSection implements AfterViewInit {
       stack: ['Angular', 'TypeScript', 'REST API', 'ASP.NET Web API', 'TailwindCSS'],
       image: 'assets/imgs/logistics-system.jpg',
       liveDemo: '', // optional
-      github: 'https://github.com/yourusername/logistics-management-system', // optional
-      video: '',
+      github: 'https://github.com/biruk-mulualem/super_logistics.git', // optional
+      video: 'https://youtu.be/bfbQzup76iw',
       showFullDescription: false,
     },
     {
@@ -68,8 +68,8 @@ export class ProjectsSection implements AfterViewInit {
       stack: ['HTML', 'CSS', 'JavaScript'],
       image: 'assets/imgs/super-website.jpg',
       liveDemo: 'https://rodaspaints.netlify.app',
-      github: '',
-      video: '',
+      github: 'https://github.com/biruk-mulualem/RodasPaintWebsite.git',
+      video: 'https://youtu.be/BvRYWNsCbeI',
       showFullDescription: false,
     },
   ];
