@@ -1,82 +1,62 @@
-<!-- end of testimonial section -->
-
-<!-- blog section -->
+<!-- Blog Section -->
 <section class="section" id="blog">
-  <!-- container -->
   <div class="container text-center">
-    <p class="section-subtitle">Recent Posts?</p>
+    <p class="section-subtitle">Insights, Case Studies & Learning</p>
     <h6 class="section-title mb-6">Blog</h6>
-    <!-- blog-wrapper -->
-    <div class="blog-card">
+
+    <div class="blog-card" *ngFor="let blog of blogs; let i = index">
       <div class="blog-card-header">
-        <img
-          src="assets/imgs/img-1.jpg"
-          class="blog-card-img"
-          alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-        />
+       <img
+  [src]="blog.image"
+  class="blog-card-img w-80 h-48 object-cover mx-auto rounded-md"
+  [alt]="blog.title"
+/>
+
       </div>
+
       <div class="blog-card-body">
-        <h5 class="blog-card-title">Consectetur adipisicing elit</h5>
+        <h5 class="blog-card-title">{{ blog.title }}</h5>
 
-        <p class="blog-card-caption">
-          <a href="#">By: Admin</a>
-          <a href="#"><i class="ti-heart text-danger"></i> 234</a>
-          <a href="#"><i class="ti-comment"></i> 123</a>
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet nesciunt qui sit velit
-          delectus voluptates, repellat ipsum culpa id deleniti. Rerum debitis facilis accusantium
-          neque numquam mollitia modi quasi distinctio.
-        </p>
+<p class="blog-card-caption flex flex-wrap justify-center items-center text-sm text-gray-500 space-x-3">
+  <span class="flex items-center gap-1">
+    <i class="ti-user text-gray-400"></i>
+    <span class="font-medium text-gray-700 hover:text-blue-600 transition-colors">Biruk Mulualem</span>
+  </span>
+  <span class="text-gray-300">|</span>
+  <span class="flex items-center gap-1">
+    <i class="ti-settings text-gray-400"></i>
+    <span class="font-medium text-gray-700 hover:text-blue-600 transition-colors">{{ blog.tags }}</span>
+  </span>
+  <span class="text-gray-300">|</span>
+  <span class="flex items-center gap-1">
+    <i class="ti-calendar text-gray-400"></i>
 
-        <p>
-          <b
-            >Necessitatibus nihil impedit! Ex nisi eveniet, dolor aliquid consequuntur
-            repudiandae.</b
-          >
-        </p>
-        <p>
-          Magnam in repellat enim harum omnis aperiam! Explicabo illo, commodi, dolor blanditiis
-          cupiditate harum nisi vero accusamus laudantium voluptatibus dolores quae obcaecati.
-        </p>
+        <span class="font-medium text-gray-700 hover:text-blue-600 transition-colors">{{ blog.dates}}</span>
+  </span>
+</p>
 
-        <a href="#" class="blog-card-link">Read more <i class="ti-angle-double-right"></i></a>
+
+        <p>{{ blog.preview }}</p>
+
+        <!-- Expanded Content -->
+        <div *ngIf="blog.expanded" [innerHTML]="blog.content"></div>
+
+        <a
+          href="javascript:void(0)"
+          class="blog-card-link"
+          (click)="toggleBlog(i)"
+        >
+          {{ blog.expanded ? 'Read less' : 'Read more' }}
+          <i
+            class="ti-angle-double-right"
+            *ngIf="!blog.expanded"
+          ></i>
+          <i
+            class="ti-angle-double-up"
+            *ngIf="blog.expanded"
+          ></i>
+        </a>
       </div>
     </div>
-    <!-- end of blog wrapper -->
-
-    <!-- blog-wrapper -->
-    <div class="blog-card">
-      <div class="blog-card-header">
-        <img
-          src="assets/imgs/img-2.jpg"
-          class="blog-card-img"
-          alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-        />
-      </div>
-      <div class="blog-card-body">
-        <h5 class="blog-card-title">Explicabo illo</h5>
-
-        <p class="blog-card-caption">
-          <a href="#">By: Admin</a>
-          <a href="#"><i class="ti-heart text-danger"></i> 456</a>
-          <a href="#"><i class="ti-comment"></i> 264</a>
-        </p>
-
-        <p>
-           Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit excepturi laborum enim,
-          vitae ipsam atque eum, ad iusto consequuntur voluptas, esse doloribus. Perferendis porro
-          quisquam vitae exercitationem aliquid, minus eos laborum repudiandae, cumque debitis iusto
-          omnis praesentium? Laborum placeat sit adipisci illum tempore maxime, esse qui quae?
-          Molestias excepturi corporis similique doloribus. Esse vitae earum architecto nulla non
-          dolores illum at perspiciatis quod, et deleniti cupiditate reiciendis harum facere,
-          delectus eum commodi soluta distinctio sit repudiandae possimus sunt. Ipsum, rem.
-        </p>
-
-        <a href="#" class="blog-card-link">Read more <i class="ti-angle-double-right"></i></a>
-      </div>
-    </div>
-    <!-- end of blog wrapper -->
   </div>
-  <!-- end of container -->
 </section>

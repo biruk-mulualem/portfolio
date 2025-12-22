@@ -1,34 +1,132 @@
-<!-- end of blog section -->
+<section id="contact" class="relative bg-gray-50 py-20">
+  <div class="container mx-auto px-4">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <p class="text-blue-600 uppercase font-semibold tracking-widest mb-2">Get in Touch</p>
+      <h2 class="text-4xl md:text-5xl font-bold">Contact Me</h2>
+     <p class="text-gray-700 mt-4 max-w-2xl mx-auto text-lg md:text-xl leading-relaxed">
+  Whether you want to <span class="font-semibold text-blue-600">work together</span> or just <span class="font-semibold text-green-600">say hi</span>, feel free to drop me a message.
+  <span class="italic text-gray-500">I usually respond within 24 hours.</span>
+</p>
 
-<!-- contact section -->
-<section class="section" id="contact">
-  <div class="container text-center">
-    <p class="section-subtitle">How can you communicate?</p>
-    <h6 class="section-title mb-5">Contact Me</h6>
-    <!-- contact form -->
-    <form action="" class="contact-form col-md-10 col-lg-8 m-auto">
-      <div class="form-row">
-        <div class="form-group col-sm-6">
-          <input type="text" size="50" class="form-control" placeholder="Your Name" required />
+    </div>
+
+    <!-- Two-column layout: Contact Methods & Form -->
+    <div class="grid md:grid-cols-2 gap-12 items-start">
+
+      <!-- Contact Methods -->
+      <div class="space-y-6">
+        <div class="flex items-center bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+          <div class="w-14 h-14 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 mr-4">
+            <i class="ti-email text-2xl"></i>
+          </div>
+          <div>
+            <h5 class="font-semibold text-gray-800">Email</h5>
+            <p class="text-gray-600">biruk0571@gmail.com</p>
+          </div>
         </div>
-        <div class="form-group col-sm-6">
-          <input type="email" class="form-control" placeholder="Enter Email" requried />
+
+        <div class="flex items-center bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+          <div class="w-14 h-14 flex items-center justify-center rounded-full bg-green-100 text-green-600 mr-4">
+            <i class="ti-mobile text-2xl"></i>
+          </div>
+          <div>
+            <h5 class="font-semibold text-gray-800">Phone</h5>
+            <p class="text-gray-600">+251943087791</p>
+          </div>
         </div>
-        <div class="form-group col-sm-12">
-          <textarea
-            name="comment"
-            id="comment"
-            rows="6"
-            class="form-control"
-            placeholder="Write Something"
-          ></textarea>
+
+        <div class="flex items-center bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+          <div class="w-14 h-14 flex items-center justify-center rounded-full bg-blue-200 text-blue-700 mr-4">
+            <i class="ti-linkedin text-2xl"></i>
+          </div>
+          <div>
+            <h5 class="font-semibold text-gray-800">LinkedIn</h5>
+            <a href="https://www.linkedin.com/in/birukmulualem" target="_blank" class="text-blue-600 hover:underline">View Profile</a>
+          </div>
         </div>
-        <div class="form-group col-sm-12 mt-3">
-          <input type="submit" value="Send Message" class="btn btn-outline-primary rounded" />
+
+        <div class="flex items-center bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+          <div class="w-14 h-14 flex items-center justify-center rounded-full bg-gray-200 text-gray-800 mr-4">
+            <i class="ti-github text-2xl"></i>
+          </div>
+          <div>
+            <h5 class="font-semibold text-gray-800">GitHub</h5>
+            <a href="https://github.com/yourusername" target="_blank" class="text-gray-800 hover:underline">See Repos</a>
+          </div>
         </div>
       </div>
-    </form>
-    <!-- end of contact form -->
+
+      <!-- Contact Form -->
+
+<form class="max-w-2xl mx-auto bg-white p-10 rounded-3xl shadow-xl space-y-6">
+  <!-- Form Heading -->
+  <h3 class="text-2xl font-bold text-gray-800 text-center mb-6">Send Me a Message</h3>
+
+  <!-- Name & Email -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="relative">
+      <input
+        type="text"
+        id="name"
+        placeholder="Your Name"
+        class="peer w-full p-4 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+        required
+      />
+      <label
+        for="name"
+        class="absolute left-4 -top-3.5 bg-white px-1 text-gray-500 text-sm peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base transition-all"
+      >
+
+      </label>
+    </div>
+    <div class="relative">
+      <input
+        type="email"
+        id="email"
+        placeholder="Your Email"
+        class="peer w-full p-4 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+        required
+      />
+      <label
+        for="email"
+        class="absolute left-4 -top-3.5 bg-white px-1 text-gray-500 text-sm peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base transition-all"
+      >
+
+      </label>
+    </div>
   </div>
-  <!-- end of container -->
+
+  <!-- Message -->
+  <div class="relative">
+    <textarea
+      id="message"
+      rows="6"
+      placeholder="Write Your Message"
+      class="peer w-full border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+      required
+    ></textarea>
+    <label
+      for="message"
+      class="absolute left-4 -top-3.5 bg-white px-1 text-gray-500 text-sm peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base transition-all"
+    >
+
+    </label>
+  </div>
+
+  <!-- Submit Button -->
+  <button
+    type="submit"
+    class="w-full py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
+  >
+    Send Message
+  </button>
+
+
+</form>
+
+
+
+    </div>
+  </div>
 </section>
