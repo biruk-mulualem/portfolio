@@ -11,7 +11,7 @@ pipeline {
         stage("Pull from GitHub") {
             steps {
                 checkout([$class: 'GitSCM',
-                          branches: [[name: '*/master']],
+                          branches: [[name: '*/main']],
                           userRemoteConfigs: [[
                               url: 'https://github.com/biruk-mulualem/portfolio.git',
                               credentialsId: 'github-credentials' // replace with your Jenkins GitHub credential ID

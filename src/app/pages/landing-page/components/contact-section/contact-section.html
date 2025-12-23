@@ -1,15 +1,29 @@
 <section id="contact" class="relative bg-gray-50 py-20">
   <div class="container mx-auto px-4">
     <!-- Header -->
-    <div class="text-center mb-16">
-      <p class="text-blue-600 uppercase font-semibold tracking-widest mb-2">Get in Touch</p>
-      <h2 class="text-4xl md:text-5xl font-bold">Contact Me</h2>
-     <p class="text-gray-700 mt-4 max-w-2xl mx-auto text-lg md:text-xl leading-relaxed">
-  Whether you want to <span class="font-semibold text-blue-600">work together</span> or just <span class="font-semibold text-green-600">say hi</span>, feel free to drop me a message.
-  <span class="italic text-gray-500">I usually respond within 24 hours.</span>
-</p>
+   <div class="text-center mb-16 px-4">
+  <!-- Small Heading -->
+  <p class="text-blue-600 uppercase font-semibold tracking-widest mb-3 text-sm md:text-base animate-pulse">
+    Get in Touch
+  </p>
 
-    </div>
+  <!-- Main Heading -->
+  <h2 class="text-4xl md:text-5xl font-extrabold mb-6 relative inline-block">
+    Contact Me
+
+  </h2>
+
+  <!-- Description -->
+  <p class="text-gray-700 mt-4 max-w-2xl mx-auto text-lg md:text-xl leading-relaxed">
+    Whether you want to
+    <span class="font-semibold text-blue-600 bg-blue-100 rounded-full px-2 py-1">work together</span>
+    or just
+    <span class="font-semibold text-green-600 bg-green-100 rounded-full px-2 py-1">say hi</span>,
+    feel free to drop me a message.
+    <span class="italic text-gray-500 block mt-3">I usually respond within <span class="font-semibold">24 hours</span>.</span>
+  </p>
+</div>
+
 
     <!-- Two-column layout: Contact Methods & Form -->
     <div class="grid md:grid-cols-2 gap-12 items-start">
@@ -36,30 +50,23 @@
           </div>
         </div>
 
-        <div class="flex items-center bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
-          <div class="w-14 h-14 flex items-center justify-center rounded-full bg-blue-200 text-blue-700 mr-4">
-            <i class="ti-linkedin text-2xl"></i>
-          </div>
-          <div>
-            <h5 class="font-semibold text-gray-800">LinkedIn</h5>
-            <a href="https://www.linkedin.com/in/birukmulualem" target="_blank" class="text-blue-600 hover:underline">View Profile</a>
-          </div>
-        </div>
+<div class="flex items-center bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+  <div class="w-14 h-14 flex items-center justify-center rounded-full bg-blue-200 text-blue-800 mr-4">
+    <i class="ti-telegram text-2xl"></i>
+  </div>
+  <div>
+    <h5 class="font-semibold text-gray-800">Telegram</h5>
+    <a href="https://t.me/Z_outcast" target="_blank" class="text-gray-800 hover:underline">Chat Now</a>
+  </div>
+</div>
 
-        <div class="flex items-center bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
-          <div class="w-14 h-14 flex items-center justify-center rounded-full bg-gray-200 text-gray-800 mr-4">
-            <i class="ti-github text-2xl"></i>
-          </div>
-          <div>
-            <h5 class="font-semibold text-gray-800">GitHub</h5>
-            <a href="https://github.com/yourusername" target="_blank" class="text-gray-800 hover:underline">See Repos</a>
-          </div>
-        </div>
       </div>
+<!-- Toast Container -->
+<div id="toast-container" class="fixed bottom-5 left-1/2 transform -translate-x-1/2 space-y-2 z-50"></div>
 
-      <!-- Contact Form -->
+<form class="max-w-2xl mx-auto bg-white p-10 rounded-3xl shadow-xl space-y-6"
+      (submit)="sendEmail($event)">
 
-<form class="max-w-2xl mx-auto bg-white p-10 rounded-3xl shadow-xl space-y-6">
   <!-- Form Heading -->
   <h3 class="text-2xl font-bold text-gray-800 text-center mb-6">Send Me a Message</h3>
 
@@ -68,61 +75,54 @@
     <div class="relative">
       <input
         type="text"
-        id="name"
+        name="user_name"
         placeholder="Your Name"
-        class="peer w-full p-4 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+        class="peer w-full p-3 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
         required
       />
-      <label
-        for="name"
-        class="absolute left-4 -top-3.5 bg-white px-1 text-gray-500 text-sm peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base transition-all"
-      >
-
-      </label>
     </div>
     <div class="relative">
       <input
         type="email"
-        id="email"
+        name="user_email"
         placeholder="Your Email"
-        class="peer w-full p-4 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+        class="peer w-full p-3 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
         required
       />
-      <label
-        for="email"
-        class="absolute left-4 -top-3.5 bg-white px-1 text-gray-500 text-sm peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base transition-all"
-      >
-      </label>
     </div>
   </div>
 
   <!-- Message -->
   <div class="relative">
     <textarea
-      id="message"
-      rows="6"
+      name="message"
+      rows="3"
       placeholder="Write Your Message"
-      class="peer w-fulle border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+      class="peer w-full border p-2 border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
       required
     ></textarea>
-    <label
-      for="message"
-      class="absolute left-4 -top-3.5 bg-white px-1 text-gray-500 text-sm peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base transition-all"
-    >
-
-    </label>
   </div>
 
   <!-- Submit Button -->
-  <button
-    type="submit"
-    class="w-full py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
-  >
-    Send Message
-  </button>
-
+ <button
+  type="submit"
+  [disabled]="isSending"
+  class="w-full py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all flex justify-center items-center gap-2"
+>
+  <span *ngIf="!isSending">Send Message</span>
+  <span *ngIf="isSending" class="flex items-center gap-2">
+    <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+    </svg>
+    Sending...
+  </span>
+</button>
 
 </form>
+
+
+
 
 
 
