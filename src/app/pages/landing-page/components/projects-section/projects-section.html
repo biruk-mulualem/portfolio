@@ -1,0 +1,108 @@
+<section id="projects" class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4 text-center">
+    <p class="text-sm text-gray-500 uppercase mb-2 tracking-wider">What I Did?</p>
+    <h2 class="text-3xl sm:text-4xl font-bold mb-12">Projects</h2>
+
+    <!-- Grid wrapper -->
+    <div class="grid grid-cols-1 mt-12 sm:grid-cols-2 lg:grid-cols-2 gap-16">
+      <!-- Project cards -->
+      <div
+        *ngFor="let project of projects"
+        class="relative group rounded-xl overflow-hidden shadow-lg bg-white transform transition duration-500 hover:scale-105 hover:shadow-2xl"
+      >
+        <img
+          [src]="project.image"
+          [alt]="project.title"
+          class="w-full h-60 sm:h-64 md:h-72 object-cover"
+        />
+
+        <!-- Hover overlay -->
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-between p-4 sm:p-6 text-left overflow-hidden"
+        >
+          <div>
+            <h4 class="text-xl sm:text-2xl font-semibold mb-1 text-white truncate !important">
+              {{ project.title }}
+            </h4>
+
+            <!-- Description with toggle -->
+            <p
+              class="text-sm sm:text-base mb-2 text-white"
+              [ngClass]="{ 'line-clamp-8': !project.showFullDescription }"
+            >
+              {{ project.description }}
+            </p>
+
+            <!-- Tech stack badges -->
+            <div class="flex flex-wrap gap-2 overflow-hidden">
+              <span
+                *ngFor="let tech of project.stack"
+                class="bg-white/20 text-white text-xs sm:text-sm px-2 py-1 rounded-full truncate"
+              >
+                {{ tech }}
+              </span>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="flex flex-wrap gap-2 mt-1">
+            <a
+              [href]="project.github"
+              target="_blank"
+              class="bg-white text-black px-1.5 py-1.5 rounded-lg hover:bg-gray-200 transition transform hover:scale-105 truncate"
+            >
+              GitHub
+            </a>
+
+            <button
+              (click)="openVideoModal(project.video)"
+              class="bg-white text-black px-1.5 py-1.5 rounded-lg hover:bg-gray-200 transition transform hover:scale-105 truncate"
+            >
+              Video
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- End of project card -->
+    </div>
+    <!-- End of grid wrapper -->
+  </div>
+
+  <!-- Video Modal -->
+
+  <div #videoModal class="fixed inset-0 flex items-center justify-center hidden z-50">
+    <!-- Backdrop -->
+    <div class="absolute inset-0 bg-opacity-50" (click)="closeVideoModal()"></div>
+
+    <!-- Modal Frame (Resizable + Draggable) -->
+    <div
+      #modalFrame
+      class="relative bg-white rounded-xl shadow-2xl overflow-auto z-10 cursor-move resize-both"
+      style="
+        width: 800px;
+        height: 450px;
+        min-width: 300px;
+        min-height: 200px;
+        max-width: 95vw;
+        max-height: 90vh;
+      "
+    >
+      <!-- Close Button -->
+      <button
+        class="absolute top-3 right-3 text-gray-700 text-3xl font-bold hover:text-black z-20"
+        (click)="closeVideoModal()"
+      >
+        ×
+      </button>
+
+      <!-- YouTube Video Embed -->
+      <iframe
+        *ngIf="currentVideo"
+        [src]="currentVideo"
+        class="w-full h-full"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</section>

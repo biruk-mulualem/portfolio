@@ -2,6 +2,16 @@ import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, HostListener } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from "@angular/router";
+import { AboutSection } from './components/about-section/about-section';
+import { BlogSection } from './components/blog-section/blog-section';
+import { ContactSection } from './components/contact-section/contact-section';
+import { FooterSection } from './components/footer-section/footer-section';
+import { HireMeSection } from './components/hire-me-section/hire-me-section';
+import { HomeSection } from './components/home-section/home-section';
+import { NavSection } from './components/nav-section/nav-section';
+import { ProjectsSection } from './components/projects-section/projects-section';
+import { TechnicalSkillSection } from './components/technical-skill-section/technical-skill-section';
+import { TestmonialSection } from './components/testmonial-section/testmonial-section';
 
 interface Work {
   image: string;
@@ -14,7 +24,19 @@ interface Work {
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule,
+
+AboutSection,
+BlogSection,
+ContactSection,
+FooterSection,
+HireMeSection,
+HomeSection,
+NavSection,
+ProjectsSection,
+TechnicalSkillSection,
+TestmonialSection
+  ],
   templateUrl: './landing-page.html',
   styleUrls: ['./landing-page.css'],
 })
